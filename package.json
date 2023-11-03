@@ -1,0 +1,19 @@
+{
+  "name": "bear-taker",
+  "version": "1.0.0",
+  "description": "Note Taker Application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": ""
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/christiecamp/bear-taker"
+  },
+  "author": "Christine Campbell",
+  "license": "ISC"
+}
