@@ -3,12 +3,11 @@
 </p>
 
 [![License: mit](https://img.shields.io/badge/license-mit-pink?)](https://opensource.org/licenses/MIT)
-[![Javascript Badge](https://img.shields.io/badge/javascript-pink?logo=javascript&logoColor=white)](https://javascript.com/)
-[![Node.js Badge](https://img.shields.io/badge/node-pink?logo=nodedotjs&logoColor=fff&style=flat)](https://nodejs.org/en)
-[![Express.js Badge](https://img.shields.io/badge/express-pink.svg?&logo=Express&logoColor=white)](https://expressjs.com/)
-[![Heroku Badge](https://img.shields.io/badge/heroku-pink.svg?&logo=Heroku&logoColor=white)](https://heroku.com/)
-[![Insomnia Badge](https://img.shields.io/badge/insomnia-pink.svg?&logo=Insomnia&logoColor=white)](https://canva.com/) 
-[![Canva Badge](https://img.shields.io/badge/canva-pink.svg?&logo=Canva&logoColor=white)](https://canva.com/) 
+[![Node.js Badge](https://img.shields.io/badge/node-brown?logo=nodedotjs&logoColor=fff&style=flat)](https://nodejs.org/en)
+[![Express.js Badge](https://img.shields.io/badge/express-brown.svg?&logo=Express&logoColor=white)](https://expressjs.com/)
+[![Heroku Badge](https://img.shields.io/badge/heroku-lightgrey.svg?&logo=Heroku&logoColor=white)](https://heroku.com/)
+[![Insomnia Badge](https://img.shields.io/badge/insomnia-lightgrey.svg?&logo=Insomnia&logoColor=white)](https://canva.com/) 
+[![Canva Badge](https://img.shields.io/badge/canva-hotpink.svg?&logo=Canva&logoColor=white)](https://canva.com/) 
 
 
 ### ![table-of-contents](./bear-necessities/toc.png)
