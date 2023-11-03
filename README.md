@@ -33,13 +33,13 @@ The [Bear in Mind NOTE TAKER]() is an application that can be used to write and 
 
 This application will use an [Express.js](https://expressjs.com) back end and will **save** and **retrieve** note data from a `JSON file`.
 
-### ![user-story](./bear-necessities/)
+### ![user-story](./bear-necessities/9.png)
 ![user-story](./bear-necessities/user-story.png)
 
-### ![acceptance-criteria](./bear-necessities/)
+### ![acceptance-criteria](./bear-necessities/10.png)
 ![acceptance-criteria](./bear-necessities/acceptance-criteria.png)
 
-### ![lazy-list](./bear-necessities/)
+### ![lazy-list](./bear-necessities/11.png)
 ![lazy-list](./bear-necessities/bearylist.png)
 
 
@@ -72,14 +72,14 @@ The application was invoked using the following commands:
     * by inputting hexadecimal #
 
 
-### ![screenshot](./bear-necessities/)
+### ![screenshot](./bear-necessities/12.png)
 
 The below screenshot demonstrates the command-line application and the resulting sample SVG file that is produced.
 
 ![screenshot](./assets/screenshot.png)
 
 
-### ![demo](./assets/branding/12.png)
+### ![demo](./bear-necessities/13.png)
 
 The included demo demonstrates the command-line application and testing of the resulting sample SVG file.
 
