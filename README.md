@@ -10,6 +10,8 @@
 [![Canva Badge](https://img.shields.io/badge/canva-hotpink.svg?&logo=Canva&logoColor=white)](https://canva.com/) 
 
 
+**CURRENTLY HIBERNATING - COME BACK SOON TO SEE FINISHED README!** 
+
 ### ![table-of-contents](./bear-necessities/toc.png)
 
   - [OVERVIEW](#overview)
