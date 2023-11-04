@@ -7,6 +7,10 @@ const path = require('path');
 const app = express();
 //specify which port the server will run on
 const PORT = 3001; //placeholder
+//require JSON file
+const db = require('./db/db.json');
+
+
 
 //static middleware pointing to the public folder
 app.use(express.static('public'));
@@ -23,6 +27,7 @@ app.require('.routes/routes.js');
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port
+//console.log placeholder
 app.listen(PORT, () =>
-    console.log('Application listening at PORT')
+    console.log(`Application listening at PORT http://localhost:${PORT}`)
 );
