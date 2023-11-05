@@ -7,11 +7,11 @@ const path = require('path');
 const db = require('./db/db.json');
 
 
+//initialize an instance of express (app)
+const bear = express();
 //specify which port the server will run on
 const PORT = 3001; //placeholder
 
-//initialize an instance of express (app)
-const bear = express();
 
 
 //static middleware pointing to the public folder
