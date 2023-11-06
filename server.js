@@ -1,7 +1,5 @@
 //import express package
 const express = require('express');
-//import built-in Node.js package 'path' to respolve path of files that are located on the server
-const path = require('path');
 //initialize bear variable by setting it to the value of express. (app)
 const bear = express();
 //specify which port the server will run on

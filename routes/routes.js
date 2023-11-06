@@ -1,25 +1,26 @@
 const fs = require('fs');
+//import built-in Node.js package 'path' to respolve path of files that are located on the server
 const path = require('path');
+//import db JSON file
 const db = require('../db/db.json');
-//creating to use as placeholders
-const notes = require('../public/notes.html');
-const index = require('../public/index.html');
+
 
 
 //api routes
 
 //GET note
 bear.get('/api/notes', (req,res) => {
-    res.sendFile(path.join(__dirname, notes));
-    //reads and sends JSON response 
-    res.json(db);
-    console.info(`${req.method} request received to view notes`);
+    fs.readFile(path.join(__dirname, db), "utf8", (err, info) => {
+        if (err) throw err;
+        //reads and sends JSON response 
+        res.json(JSON.parse(info));
+    });
 });
 
 //GET specific note
 bear.get('/api/notes/:note', (req,res) => {
-    res.json(notes[req.params.note]);
-    console.info(`${req.method} request received to view specific note`);
+
+    // res.json(notes[req.params.note]);
 });
 
 
@@ -33,18 +34,20 @@ bear.post('/api/notes', (req,res) => {
     newNote.note = uuidv4();
     //adds to array
     db.push(newNote);
-    //update JSON
-    fs.writeFileSync(db);
+    //update JSON file with new note
+    fs.writeFileSync(db, JSON.stringify(db));
     //respond with new note
     res.json(db);
-    console.log(req.body);
-    console.info(`${req.method} request received to post a new note`);
+    console.log(newNote);
 });
 
 
 //DELETE note
 bear.delete('/api/notes/:note', (req, res) => {
-    console.info(`${req.method} request received to delete note`);
+    const newBear = db.filter((teddy) =>
+    teddy.note !== req.params.note);
+    fs.writeFileSync(db, JSON.stringify(newBear));
+    readFile.json(newBear);
 });
 
 
@@ -57,15 +60,15 @@ bear.delete('/api/notes/:note', (req, res) => {
 //html routes
 //home
 bear.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, index));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 //notes
 bear.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, notes));
+    res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
 //wildcard
 bear.get('*', (req,res) => {
-    return res.sendFile(path.join(__dirname, index));
+    return res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 
