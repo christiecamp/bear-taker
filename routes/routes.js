@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../db/db.json');
+//creating to use as placeholders
 const notes = require('../public/notes.html');
 const index = require('../public/index.html');
 
@@ -13,13 +14,27 @@ bear.get('/api/notes', (req,res) => {
     res.sendFile(path.join(__dirname, notes));
     //reads and sends JSON response 
     res.json(db);
-    console.info(`${req.method} request received view notes`);
+    console.info(`${req.method} request received to view notes`);
 });
 
 //POST route for notes
 bear.post('/api/notes', (req,res) => {
+    //pulls note from body of request
+    const newNote = req.body;
+    //unique id to new note
+    //uuidv4 generates a unique identifier string
+    newNote.note = uuidv4();
+    //adds to array
+    db.push(newNote);
+    //update JSON
+    fs.writeFileSync(db);
+    //respond with new note
+    res.json(db);
+    console.log(req.body);
     console.info(`${req.method} request received to post a new note`);
 });
+
+
 
 //GET route that returns a specific note
 bear.get('/api/notes/:note', (req,res) => {
