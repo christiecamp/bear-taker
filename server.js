@@ -3,11 +3,10 @@ const express = require('express');
 //import built-in Node.js package 'path to respolve path of files that are located on the server
 const fs = require('fs');
 const path = require('path');
-//require JSON file
+//require JSON file and assigns it to a variable called 'db'
 const db = require('./db/db.json');
 
-
-//initialize an instance of express (app)
+//initialize bear variable by setting it to the value of express. (app)
 const bear = express();
 //specify which port the server will run on
 const PORT = 3001; //placeholder
@@ -19,7 +18,7 @@ bear.use(express.static('public'));
 bear.use(express.json());
 
 //route file - placeholder
-require('.routes/routes.js')(bear);
+bear.require('.routes/routes.js');
 
 // app.get() is a method that allows express to respond to requests from the client. 
 // Each routing method corresponds to an HTTP method of the same name. ]
