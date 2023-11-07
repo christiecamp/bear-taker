@@ -6,7 +6,7 @@ const fs = require('fs');
 
 //GET note
 grizzly.get('/api/notes', (req,res) => {
-   res.sendFile(path.join(__dirname, '../db/db.json'));
+   res.sendFile(path.join(__dirname, 'db/db.json'));
 });
 
 
@@ -37,7 +37,7 @@ grizzly.post('/api/notes', (req,res) => {
 grizzly.delete('/api/notes/:note', (req, res) => {
     //reading note from db.json
     let db = JSON.parse(fs.readFileSync('db/db.json'))
-    //remove note
+    //remove note (teddy-item)
     let deleteBear = db.filter((teddy) =>
     //id
     teddy.note !== req.params.note);

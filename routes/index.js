@@ -1,10 +1,10 @@
 const express = require('express');
 
-//routes
-const grizzly = require('./api.js');
-const polar = require('./html.js');
+//import modular routers
+const grizzly = require('./api');
+const polar = require('./html');
 
-const bear = express ();
+const bear = express();
 
 bear.use('/notes', grizzly);
 bear.use('/', polar);
