@@ -1,8 +1,20 @@
+const express = require('express');
 const fs = require('fs');
 //import built-in Node.js package 'path' to respolve path of files that are located on the server
 const path = require('path');
 //import db JSON file
 const db = require('./db/db.json');
+const grizzly = require('./api.js');
+const polar = require('./html.js');
+const bear = express ();
+
+bear.use('/notes', grizzly);
+bear.use('/', polar);
+
+
+module.exports = bear;
+
+
 
 
 
@@ -10,10 +22,11 @@ const db = require('./db/db.json');
 
 //GET note
 bear.get('/api/notes', (req,res) => {
-    fs.readFile(path.join(__dirname, '/db/db.json'), "utf8", (err, info) => {
+    fs.readFile('/db/db.json', "utf8", (err, info) => {
         if (err) throw err;
         //reads and sends JSON response 
-        res.json(JSON.parse(info));
+        let dbBear = JSON.parse(info)
+        res.json(dbBear);
     });
 });
 
@@ -62,11 +75,11 @@ bear.get('/', (req, res) => {
 bear.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
+//
+bear.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, '/db/db.json'));
+});
 //wildcard
 bear.get('*', (req,res) => {
     return res.sendFile(path.join(__dirname, '/public/index.html'));
 });
-
-
-
-module.exports = bear;
