@@ -1,5 +1,5 @@
-const path = require('path');
 const polar = require('express').Router();
+const path = require('path');
 
 //html routes
 
@@ -7,13 +7,12 @@ const polar = require('express').Router();
 polar.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
+
+//notes
 polar.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
-//
-polar.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../db/db.json'));
-});
+
 //wildcard
 polar.get('*', (req,res) => {
    res.sendFile(path.join(__dirname, '../public/index.html'));
