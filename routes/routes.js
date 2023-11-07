@@ -2,7 +2,7 @@ const fs = require('fs');
 //import built-in Node.js package 'path' to respolve path of files that are located on the server
 const path = require('path');
 //import db JSON file
-const db = require('../db/db.json');
+const db = require('./db/db.json');
 
 
 
@@ -10,7 +10,7 @@ const db = require('../db/db.json');
 
 //GET note
 bear.get('/api/notes', (req,res) => {
-    fs.readFile(path.join(__dirname, db), "utf8", (err, info) => {
+    fs.readFile(path.join(__dirname, '/db/db.json'), "utf8", (err, info) => {
         if (err) throw err;
         //reads and sends JSON response 
         res.json(JSON.parse(info));
@@ -53,22 +53,18 @@ bear.delete('/api/notes/:note', (req, res) => {
 
 
 
-
-
-
-
 //html routes
 //home
 bear.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 //notes
 bear.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 //wildcard
 bear.get('*', (req,res) => {
-    return res.sendFile(path.join(__dirname, '../public/index.html'));
+    return res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 

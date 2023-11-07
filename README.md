@@ -41,8 +41,8 @@ This application will use an [Express.js](https://expressjs.com) back end and wi
 ### ![acceptance-criteria](./bear-necessities/10.png)
 ![acceptance-criteria](./bear-necessities/acceptance-criteria.png)
 
-### ![lazy-list](./bear-necessities/11.png)
-![lazy-list](./bear-necessities/bearylist.png)
+### ![beary-list](./bear-necessities/11.png)
+![lazy-list](./bear-necessities/beary-list.png)
 
 
 ### ![installation](./bear-necessities/2.png)
@@ -137,8 +137,7 @@ Here's a list of technologies used:
 
 [![Github Badge](https://img.shields.io/badge/christiecamp-pink.svg?&logo=Github&logoColor=white)](https://github.com/christiecamp) 
 
-![Gmail Badge](https://img.shields.io/badge/Gmail-pink.svg?&logo=Gmail&logoColor=white)
-
+![Gmail Badge](https://img.shields.io/badge/-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:abc@example.com?subject = Feedback&body = Message"> <3 <3 <3</a>
 
 
 <!-- <a href="https://www.christiecamp.com"><img height="250px" src ="./assets/branding/lazy-logo.png"></a> -->

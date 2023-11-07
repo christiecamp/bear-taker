@@ -12,8 +12,8 @@ bear.use(express.urlencoded({ extended: true }));
 bear.use(express.static('public'));
 bear.use(express.json());
 
-//route file - placeholder
-bear.require('.routes/routes.js');
+//routes
+bear.use('/routes/routes.js');
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port
