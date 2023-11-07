@@ -5,14 +5,14 @@ const fs = require('fs');
 //api routes
 
 //GET note
-grizzly.get('/api/notes', (req,res) => {
-   res.sendFile(path.join(__dirname, 'db/db.json'));
+grizzly.get('/notes', (req,res) => {
+   res.sendFile(path.join(__dirname, '../db/db.json'));
 });
 
 
 //POST note
-grizzly.post('/api/notes', (req,res) => {
-    let db = fs.readFileSync('db/db.json');
+grizzly.post('/notes', (req,res) => {
+    let db = fs.readFileSync('../db/db.json');
     db = JSON.parse(db);
     res.json(db);
     //body of note
@@ -26,7 +26,7 @@ grizzly.post('/api/notes', (req,res) => {
     //adds to array
     db.push(newBear);
     //update JSON file with new note
-    fs.writeFileSync('db/db.json', JSON.stringify(db));
+    fs.writeFileSync('../db/db.json', JSON.stringify(db));
     //respond with new note
     res.json(db);
     console.log(newBear);
@@ -34,15 +34,15 @@ grizzly.post('/api/notes', (req,res) => {
 
 
 //DELETE note
-grizzly.delete('/api/notes/:note', (req, res) => {
+grizzly.delete('/notes/:note', (req, res) => {
     //reading note from db.json
-    let db = JSON.parse(fs.readFileSync('db/db.json'))
+    let db = JSON.parse(fs.readFileSync('../db/db.json'))
     //remove note (teddy-item)
     let deleteBear = db.filter((teddy) =>
     //id
     teddy.note !== req.params.note);
     //rewriting note
-    fs.writeFileSync('db/db.json', JSON.stringify(deleteBear));
+    fs.writeFileSync('../db/db.json', JSON.stringify(deleteBear));
     res.json(deleteBear);
 });
 

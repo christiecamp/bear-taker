@@ -14,7 +14,7 @@ bear.use(express.json());
 bear.use(express.urlencoded({ extended: true }));
 
 //routes
-bear.use('/api', panda);
+require('/api', panda)(bear);
 
 //host public folder
 bear.use(express.static('public'));

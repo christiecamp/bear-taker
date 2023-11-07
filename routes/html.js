@@ -5,17 +5,17 @@ const path = require('path');
 
 //home
 polar.get('/', (req, res) => 
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 );
 
 //notes
 polar.get('/notes', (req, res) => 
-    res.sendFile(path.join(__dirname, '/public/notes.html'))
+    res.sendFile(path.join(__dirname, '../public/notes.html'))
 );
 
 //wildcard
 polar.get('*', (req,res) => 
-   res.sendFile(path.join(__dirname, '/public/index.html'))
+   res.sendFile(path.join(__dirname, '../public/index.html'))
 );
 
 module.exports = polar;
