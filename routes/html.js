@@ -15,7 +15,7 @@ polar.get('/notes', (req, res) => {
 
 //wildcard
 polar.get('*', (req,res) => {
-   res.sendFile(path.join(__dirname, '../public/index.html'));
+   return res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 module.exports = polar;
