@@ -93,20 +93,20 @@ The below screenshot demonstrates the application writing, saving, and deleting 
 
 ### ![demo](./bear-necessities/13.png)
 
-The included demo demonstrates the testing of the application.
+The included demo demonstrates the functionality and testing of the application.
 
-### Generating SVG
+### Walkthrough
 
 ![generatedemo]()
 
-### Testing SVG
+### Testing
 
 ![testdemo]()
 
 
 ### ![testing](./bear-necessities/8.png)
 
-
+Insomnia provides a way to test the app, all within a test suite.
 
 
 ### ![sources](./bear-necessities/4.png)
@@ -115,9 +115,9 @@ Here's a list of technologies used:
 
 1. [Node.js]() - is an open-source, cross-platform JavaScript runtime environment.
 
-2. [Inquirer]((https://www.npmjs.com/package/inquirer/v/8.2.4)) - the NPM package that provides an easy way to capture user input in your Node. js command line interface applications. 
+2. [Express.js]((https://expressjs.com)) - a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
-3. [Insomnia](https://insomnia.rest/) - open source API used for testing and development.
+3. [Insomnia](https://insomnia.rest/) - open source API used for testing and development in local host.
 
 3. [Heroku](https://heroku.com) - used to deploy, manage, and scale the application.
 
@@ -132,18 +132,18 @@ Here's a list of technologies used:
 
 [GitHub Repository](https://github.com/christiecamp/bear-taker)
 
-[Deployed Application]()
+[Deployed Application](https://bear-taker-5e98aabde130.herokuapp.com/)
 
-[Video Walkthrough - Generate SVG]()
+[Video Demo]()
 
-[Video Walkthrough - Testing SVG]()
+[Testing]()
 
 
 ### ![connect](./bear-necessities/7.png)
 
 [![Github Badge](https://img.shields.io/badge/christiecamp-pink.svg?&logo=Github&logoColor=white)](https://github.com/christiecamp) 
 
-![Gmail Badge](https://img.shields.io/badge/-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:abc@example.com?subject = Feedback&body = Message"> <3 <3 <3</a>
+![Gmail Badge](https://img.shields.io/badge/-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:abc@example.com?subject = Feedback&body = Message"> <3 </a>
 
 
 <!-- <a href="https://www.christiecamp.com"><img height="250px" src ="./assets/branding/lazy-logo.png"></a> -->
