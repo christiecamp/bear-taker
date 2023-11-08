@@ -4,15 +4,15 @@ const fs = require('fs');
 const uniqid = require('uniqid');
 
 //api routes
-module.exports = (bear) => {
+const bear = require('express').Router();
 
     //GET note
-    bear.get('/api/notes', (req,res) => {
+    bear.get('/notes', (req,res) => {
         res.sendFile(path.join(__dirname, '../db/db.json'));
     });
 
     // //POST note
-    bear.post('/api/notes', (req,res) => {
+    bear.post('/notes', (req,res) => {
         let db = fs.readFileSync('db/db.json');
         db = JSON.parse(db);
         res.json(db);
@@ -42,4 +42,5 @@ module.exports = (bear) => {
     fs.writeFileSync('db/db.json', JSON.stringify(deleteBear));
     res.json(deleteBear);
     })
-};
+
+module.exports = bear;

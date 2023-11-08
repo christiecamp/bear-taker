@@ -1,7 +1,8 @@
 const path = require('path');
 
 //html routes
-module.exports = (bear) => {
+const bear = require('express').Router();
+
     //notes
     bear.get('/notes', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/notes.html'));
@@ -16,4 +17,5 @@ module.exports = (bear) => {
     bear.get('*', (req,res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
-};
+
+module.exports = bear;

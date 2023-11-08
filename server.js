@@ -1,5 +1,7 @@
 //import express package
 const express = require('express');
+const grizzly = require('./routes/api.js');
+const polar = require('./routes/html.js');
 
 //initialize express app
 const bear = express();
@@ -15,8 +17,8 @@ bear.use(express.static('public'));
 
 //routes
 //point server to route files
-require('./routes/api')(bear);
-require('./routes/html')(bear);
+bear.use('/api', grizzly);
+bear.use('/', polar);
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port
@@ -29,6 +31,6 @@ bear.listen(PORT, () =>
     ************
   
     Server listening on PORT 
-    http://localhost:${PORT}!
+    http://localhost:${PORT} !
 
     `));
