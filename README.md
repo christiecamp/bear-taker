@@ -76,16 +76,13 @@ node server
 
 ### ![screenshot](./bear-necessities/12.png)
 
-The below screenshot demonstrates the application's interface and server. 
-
+The below screenshot demonstrates the application's interface and server file. 
 ![screenshot](./bear-necessities//ss.png)
 
 ### ![demo](./bear-necessities/13.png)
-The included demo demonstrates the functionality - GET, POST, DELETE - and testing of the application.
+The included demo demonstrates the functionality - read, write, and delete notes - of the application.
 
-### Walkthrough
-
-![generatedemo]()
+![demo](./bear-necessities/bear-taker.gif)
 
 ### ![testing](./bear-necessities/8.png)
 
@@ -115,14 +112,14 @@ Here's a list of technologies used:
 
 [Deployed Application](https://bear-taker-5e98aabde130.herokuapp.com/)
 
-[Video Demo]()
+[Video Demo](https://www.loom.com/share/0f86f8baa48943e3b9c36090a33695a8)
 
 ### ![connect](./bear-necessities/7.png)
 
 [![Github Badge](https://img.shields.io/badge/christiecamp-pink.svg?&logo=Github&logoColor=white)](https://github.com/christiecamp/bear-taker) 
 
-![Gmail Badge](https://img.shields.io/badge/gmail-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:christiecamphoto@gmail.com?subject = Feedback&body = Message">  click<3 </a>
+![Gmail Badge](https://img.shields.io/badge/-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:christiecamphoto@gmail.com?subject = Feedback&body = Message">  <3 </a>
 
 <p align="center">
-<a href="https://www.christiecamp.com"><img src ="./bear-necessities/footer.png"></a>
+<a href="https://www.christiecamp.com"><img height= 200px src ="./bear-necessities/footer.png"></a>
 </p>
