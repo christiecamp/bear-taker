@@ -70,7 +70,7 @@ npm i express
 npm i uuidv4
 ```
 ```javascript
-npm run start
+npm run start // npm i nodemon
 ```
 
 ### ![usage](./bear-necessities/3.png)
