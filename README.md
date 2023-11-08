@@ -66,6 +66,9 @@ npm init -y
 ```javascript
 npm i express
 ```
+```javascript
+npm i uuidv4
+```
 
 ### ![usage](./bear-necessities/3.png)
 

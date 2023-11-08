@@ -1,17 +1,18 @@
 const grizzly = require('express').Router();
-const path = require('path');
 const fs = require('fs');
+//uuidv4 generates a unique identifier string
+const { uuid } = require('uuidv4');
 
 //api routes
 
 //GET note
-grizzly.get('/notes', (req,res) => {
-   res.sendFile(path.join(__dirname, '../db/db.json'));
+grizzly.get('/api/notes', (req,res) => {
+    readFromFile('../db/db.json').then((db) => res.json(JSON.parse(db)));
 });
 
 
 //POST note
-grizzly.post('/notes', (req,res) => {
+grizzly.post('/api/notes', (req,res) => {
     let db = fs.readFileSync('../db/db.json');
     db = JSON.parse(db);
     res.json(db);
@@ -21,8 +22,7 @@ grizzly.post('/notes', (req,res) => {
         text: req.body.text,
     };
     //unique id to new note
-    //uuidv4 generates a unique identifier string
-    newBear.note = uuidv4();
+    newBear.note = uuid();
     //adds to array
     db.push(newBear);
     //update JSON file with new note
@@ -34,7 +34,7 @@ grizzly.post('/notes', (req,res) => {
 
 
 //DELETE note
-grizzly.delete('/notes/:note', (req, res) => {
+grizzly.delete('/api/notes/:note', (req, res) => {
     //reading note from db.json
     let db = JSON.parse(fs.readFileSync('../db/db.json'))
     //remove note (teddy-item)
