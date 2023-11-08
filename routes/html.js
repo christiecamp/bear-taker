@@ -1,21 +1,19 @@
-const polar = require('express').Router();
 const path = require('path');
 
 //html routes
+module.exports = (app) => {
+    //notes
+    app.get('/notes', (req, res) => {
+        res.sendFile(path.join(__dirname, '../public/notes.html'));
+    });
 
-//home
-polar.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+    //home
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, '../public/index.html'));
+    });
 
-//notes
-polar.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
-});
-
-//wildcard
-polar.get('/*', (req,res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
-
-module.exports = polar;
+    //wildcard
+    app.get('*', (req,res) => {
+        res.sendFile(path.join(__dirname, '../public/index.html'));
+    });
+};
