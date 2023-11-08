@@ -37,7 +37,7 @@ This application will use an [Express.js](https://expressjs.com) back end and wi
 ![acceptance-criteria](./bear-necessities/acceptance-criteria.png)
 
 ### ![beary-list](./bear-necessities/11.png)
-![lazy-list](./bear-necessities/beary-list.png)
+![beary-list](./bear-necessities/beary-list.png)
 
 ### ![installation](./bear-necessities/2.png)
 
