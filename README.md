@@ -9,9 +9,6 @@
 [![Insomnia Badge](https://img.shields.io/badge/insomnia-lightgrey.svg?&logo=Insomnia&logoColor=white)](https://canva.com/) 
 [![Canva Badge](https://img.shields.io/badge/canva-hotpink.svg?&logo=Canva&logoColor=white)](https://canva.com/) 
 
-
-**CURRENTLY HIBERNATING - COME BACK SOON TO SEE FINISHED README!** 
-
 ### ![table-of-contents](./bear-necessities/toc.png)
 
   - [OVERVIEW](#overview)
@@ -28,8 +25,6 @@
   - [LINKS](#links)
   - [CONNECT](#connect)
 
-
-
 ### ![overview](./bear-necessities/1.png)
 The [Bear in Mind NOTE TAKER]() is an application that can be used to write and save notes.
 
@@ -44,7 +39,6 @@ This application will use an [Express.js](https://expressjs.com) back end and wi
 ### ![beary-list](./bear-necessities/11.png)
 ![lazy-list](./bear-necessities/beary-list.png)
 
-
 ### ![installation](./bear-necessities/2.png)
 
 The application is invoked using the following commands:
@@ -58,7 +52,7 @@ git clone https://github.com/christiecamp/bear-taker.git
 *Navigate to the command line and input:*
 
 ```javascript
-node index.js
+node index
 ```
 ```javascript
 npm init -y
@@ -67,50 +61,37 @@ npm init -y
 npm i express
 ```
 ```javascript
-npm i uuidv4
+npm i nodemon
 ```
 ```javascript
-npm run start // npm i nodemon
-```
-```javascript
-nodemon server run
+node server
 ```
 
 ### ![usage](./bear-necessities/3.png)
 
 **INSTRUCTIONS:**
 
-1. 
-2. 
-3. 
-3. 
-4. 
-
+1. Open the Integrated Terminal and input - node server.
+2. Once your server is live, click on the provided PORT link in your integrated terminal to use application - http://localhost:3013.
 
 ### ![screenshot](./bear-necessities/12.png)
 
-The below screenshot demonstrates the application writing, saving, and deleting user notes.
+The below screenshot demonstrates the application's interface and server. 
 
-![screenshot]()
-
+![screenshot](./bear-necessities//ss.png)
 
 ### ![demo](./bear-necessities/13.png)
-
-The included demo demonstrates the functionality and testing of the application.
+The included demo demonstrates the functionality - GET, POST, DELETE - and testing of the application.
 
 ### Walkthrough
 
 ![generatedemo]()
 
-### Testing
-
-![testdemo]()
-
-
 ### ![testing](./bear-necessities/8.png)
 
 Insomnia provides a way to test the app, all within a test suite.
 
+![insomniass](./bear-necessities/insomniass.png)
 
 ### ![sources](./bear-necessities/4.png)
 
@@ -124,12 +105,9 @@ Here's a list of technologies used:
 
 3. [Heroku](https://heroku.com) - used to deploy, manage, and scale the application.
 
-
-
 ### ![license](./bear-necessities/5.png)
 
  [MIT License](./LICENSE)
-
 
 ### ![links](./bear-necessities/6.png)
 
@@ -139,16 +117,12 @@ Here's a list of technologies used:
 
 [Video Demo]()
 
-[Testing]()
-
-
 ### ![connect](./bear-necessities/7.png)
 
-[![Github Badge](https://img.shields.io/badge/christiecamp-pink.svg?&logo=Github&logoColor=white)](https://github.com/christiecamp) 
+[![Github Badge](https://img.shields.io/badge/christiecamp-pink.svg?&logo=Github&logoColor=white)](https://github.com/christiecamp/bear-taker) 
 
-![Gmail Badge](https://img.shields.io/badge/-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:abc@example.com?subject = Feedback&body = Message"> <3 </a>
+![Gmail Badge](https://img.shields.io/badge/gmail-pink.svg?&logo=Gmail&logoColor=white)<a href = "mailto:christiecamphoto@gmail.com?subject = Feedback&body = Message">  click<3 </a>
 
-
-<!-- <a href="https://www.christiecamp.com"><img height="250px" src ="./assets/branding/lazy-logo.png"></a> -->
-
-  
+<p align="center">
+<a href="https://www.christiecamp.com"><img src ="./bear-necessities/footer.png"></a>
+</p>
