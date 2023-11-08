@@ -20,8 +20,13 @@ bear.use('/', panda);
 //listen() method is responsible for listening to incoming connectings on the specified port
 bear.listen(PORT, () =>
     console.log(`
-    *************************
+    ************
+    *WELCOME TO*
+    Bear in Mind
+    *NOTE TAKER*
+    ************
+  
     Server listening on PORT 
     http://localhost:${PORT}!
-    *************************
+
     `));
