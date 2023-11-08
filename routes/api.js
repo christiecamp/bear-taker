@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-//uuidv4 generates a unique identifier string
-const { uuid } = require('uuidv4');
+//uniqid generates a unique identifier string
+const uniqid = require('uniqid');
 
 //api routes
 module.exports = (app) => {
@@ -17,19 +17,19 @@ module.exports = (app) => {
         db = JSON.parse(db);
         res.json(db);
         //body of note
-        let newNote = {
+        let userNote = {
             title: req.body.title,
             text: req.body.text,
             //unique id to new note
-            id: uuid(),
+            id: uniqid(),
         };
         //add to array
-        db.push(newNote);
+        db.push(userNote);
         //update JSON file with new note
-        fs.writeFile('db/db.json', JSON.stringify(db));
+        fs.writeFileSync('db/db.json', JSON.stringify(db));
         //respond with new note
         res.json(db);
-        console.log(newNote);
+        console.log(userNote);
     }); 
 
     //DELETE note
@@ -37,10 +37,9 @@ module.exports = (app) => {
     //reading notes from db.json
     let db = JSON.parse(fs.readFileSync('db/db.json'))
     //remove note (teddy-item)
-    let deleteNote = db.filter(item => 
-    item.id !== req.params.id);
+    let deleteNotes = db.filter(item => item.id !== req.params.id);
     //rewriting note
-    fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
-    res.json(deleteNote);
-    });
+    fs.writeFileSync('db/db.json', JSON.stringify(deleteNotes));
+    res.json(deleteNotes);
+    })
 };
