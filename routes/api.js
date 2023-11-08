@@ -28,7 +28,7 @@ const bear = require('express').Router();
         //update JSON file with new note
         fs.writeFileSync('db/db.json', JSON.stringify(db));
         //respond with new note
-        res.json(db);
+        res.json(newBear);
         console.log(newBear);
     }); 
 
