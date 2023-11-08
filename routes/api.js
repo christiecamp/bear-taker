@@ -21,7 +21,7 @@ const bear = require('express').Router();
             title: req.body.title,
             text: req.body.text,
             //unique id to new note
-            teddy: uniqid(),
+            id: uniqid(),
         };
         //add to array
         db.push(newBear);
@@ -33,14 +33,14 @@ const bear = require('express').Router();
     }); 
 
     //DELETE note
-    bear.delete('/api/notes/:teddy', (req, res) => {
-    //reading notes from db.json
-    let db = JSON.parse(fs.readFileSync('db/db.json'))
-    //remove note (teddy-item)
-    let deleteBear = db.filter(item => item.teddy !== req.params.id);
-    //rewriting note
-    fs.writeFileSync('db/db.json', JSON.stringify(deleteBear));
-    res.json(deleteBear);
-    })
+    bear.delete('/notes/:id', (req, res) => {
+        //reading notes from db.json
+        let db = JSON.parse(fs.readFileSync('db/db.json'));
+        //remove note (teddy-item)
+        let deleteBear = db.filter(teddy => teddy.id !== req.params.id);
+        //rewriting note
+        fs.writeFileSync('db/db.json', JSON.stringify(deleteBear));
+        res.json(deleteBear);
+    });
 
 module.exports = bear;

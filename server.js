@@ -7,11 +7,11 @@ const polar = require('./routes/html.js');
 const bear = express();
 
 //specify port
-const PORT = process.env.PORT || 3013;
+const PORT = process.env.PORT || 3005;
 
 //parsing incoming JSON data & urlencoded data
-bear.use(express.json());
 bear.use(express.urlencoded({ extended: true }));
+bear.use(express.json());
 //host public folder
 bear.use(express.static('public'));
 
@@ -23,6 +23,7 @@ bear.use('/', polar);
 
 //listen() method is responsible for listening to incoming connectings on the specified port
 bear.listen(PORT, () =>
+
     console.log(`
     ************
     *WELCOME TO*
