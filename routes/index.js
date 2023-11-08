@@ -6,8 +6,8 @@ const polar = require('./html');
 
 const bear = express();
 
-bear.use('/notes', grizzly);
-bear.use('/', polar);
+bear.use('/api/notes', grizzly);
+bear.use('/notes', polar);
 
 
 module.exports = bear;
