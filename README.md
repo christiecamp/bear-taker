@@ -72,6 +72,9 @@ npm i uuidv4
 ```javascript
 npm run start // npm i nodemon
 ```
+```javascript
+nodemon server run
+```
 
 ### ![usage](./bear-necessities/3.png)
 

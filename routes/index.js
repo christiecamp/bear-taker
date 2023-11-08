@@ -6,7 +6,7 @@ const polar = require('./html');
 
 const bear = express();
 
-bear.use('/api/notes', grizzly);
+bear.use('/notes', grizzly);
 bear.use('/', polar);
 
 

@@ -14,7 +14,7 @@ bear.use(express.static('public'));
 //point server to route file
 const panda = require('./routes/index.js');
 //routes
-bear.use('/', panda);
+bear.use(panda);
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port
