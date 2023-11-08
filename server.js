@@ -2,25 +2,25 @@
 const express = require('express');
 
 //initialize express app
-const app = express();
+const bear = express();
 
 //specify port
 const PORT = process.env.PORT || 3013;
 
 //parsing incoming JSON data & urlencoded data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+bear.use(express.json());
+bear.use(express.urlencoded({ extended: true }));
 //host public folder
-app.use(express.static('public'));
+bear.use(express.static('public'));
 
 //routes
 //point server to route files
-require('./routes/api')(app);
-require('./routes/html')(app);
+require('./routes/api')(bear);
+require('./routes/html')(bear);
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port
-app.listen(PORT, () =>
+bear.listen(PORT, () =>
     console.log(`
     ************
     *WELCOME TO*

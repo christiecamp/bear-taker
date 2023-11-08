@@ -1,19 +1,19 @@
 const path = require('path');
 
 //html routes
-module.exports = (app) => {
+module.exports = (bear) => {
     //notes
-    app.get('/notes', (req, res) => {
+    bear.get('/notes', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/notes.html'));
     });
 
     //home
-    app.get('/', (req, res) => {
+    bear.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 
     //wildcard
-    app.get('*', (req,res) => {
+    bear.get('*', (req,res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 };
