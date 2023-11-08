@@ -7,7 +7,7 @@ const polar = require('./routes/html.js');
 const bear = express();
 
 //specify port
-const PORT = process.env.PORT || 30013;
+const PORT = process.env.PORT || 3013;
 
 //parsing incoming JSON data & urlencoded data
 bear.use(express.urlencoded({ extended: true }));
