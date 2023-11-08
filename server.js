@@ -12,9 +12,11 @@ bear.use(express.json());
 bear.use(express.static('public'));
 
 //point server to route file
-const panda = require('./routes/index.js');
+const polar = require('./routes/index.js');
 //routes
-bear.use(panda);
+bear.use(polar);
+
+// const claw = require('claw');
 
 
 //listen() method is responsible for listening to incoming connectings on the specified port

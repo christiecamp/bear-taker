@@ -7,8 +7,9 @@ const { uuid } = require('uuidv4');
 
 //GET note
 grizzly.get('/api/notes', (req,res) => {
-    let db = JSON.parse(fs.readFile('../db/db.json', "utf8"));
-    res.json(db);
+    let notes = fs.readFile('../db/db.json', "utf8");
+    notes = JSON.parse(notes);
+    res.json(notes);
 });
 
 
