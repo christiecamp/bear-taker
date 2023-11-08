@@ -69,6 +69,9 @@ npm i express
 ```javascript
 npm i uuidv4
 ```
+```javascript
+npm run start
+```
 
 ### ![usage](./bear-necessities/3.png)
 

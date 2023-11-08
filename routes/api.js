@@ -7,7 +7,9 @@ const { uuid } = require('uuidv4');
 
 //GET note
 grizzly.get('/api/notes', (req,res) => {
-    readFromFile('../db/db.json').then((db) => res.json(JSON.parse(db)));
+    let db = fs.readFileSync('../db/db.json');
+    db = JSON.parse(db);
+    res.json(db);
 });
 
 
@@ -20,9 +22,10 @@ grizzly.post('/api/notes', (req,res) => {
     let newBear = {
         title: req.body.title,
         text: req.body.text,
+        note: uuid()
     };
-    //unique id to new note
-    newBear.note = uuid();
+    // //unique id to new note
+    // newBear.note = uuid();
     //adds to array
     db.push(newBear);
     //update JSON file with new note
