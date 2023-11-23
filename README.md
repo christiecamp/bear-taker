@@ -9,6 +9,10 @@
 [![Insomnia Badge](https://img.shields.io/badge/insomnia-lightgrey.svg?&logo=Insomnia&logoColor=white)](https://canva.com/) 
 [![Canva Badge](https://img.shields.io/badge/canva-hotpink.svg?&logo=Canva&logoColor=white)](https://canva.com/) 
 
+<p align="left">
+  <img alt="mode" src="https://img.shields.io/badge/view:in-darkmode-black.svg?&logo=Github&logoColor=white" >
+</p>
+
 ### ![table-of-contents](./bear-necessities/toc.png)
 
   - [OVERVIEW](#overview)
